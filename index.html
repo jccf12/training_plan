@@ -41,14 +41,14 @@
     </button>
 
     <script>
-        // Raw CSV data from your training plan
+        // Raw CSV data from your updated training plan
         const csvData = `Day,Date,Workout,Details
 Mon,Aug 25,Recovery Day,"Sauna + Cold Plunge. Focus on hydration."
-Tues,Aug 26,Light Swim,"1,000 yards, very easy pace (RPE 4-5). Just focus on feeling the water."
-Wed,Aug 27,Personal Training,"Lower body strength. Inform your trainer about your race goal."
-Thur,Aug 28,Bike + Upper Body,"Bike: 45 minutes, steady pace (RPE 5). Upper Body: Your regular strength routine."
-Fri,Aug 29,Run,"2 miles, easy pace (RPE 6)."
-Sat,Aug 30,Swim,"Open water swim if possible, 20-30 minutes. Otherwise, 1,200 yards in the pool."
+Tues,Aug 26,Long Run Test (Completed),"6.37 miles. Strategy: 9-min run / 1-min walk. Result: Black toenail, pain 3-4/10. Confidence boost for race."
+Wed,Aug 27,Upper Body Focus & Swim,"AM: PT (only if 100% lower body & no toe pressure). PM: Upper Body Gym. Add a 20-30 minute easy, non-impact recovery swim."
+Thur,Aug 28,Bike + Sled Hockey,"Bike: 45 mins. Reduce to 20-30 easy mins if toe is painful. Sled Hockey should be fine."
+Fri,Aug 29,Swim Only,"45-minute swim session. Focus on technique and drills. NO RUNNING."
+Sat,Aug 30,Sled Hockey Exhibition Game,""
 Sun,Aug 31,Travel / Rest,""
 Mon,Sep 1,Open Water Swim,"30-40 minutes at a steady, comfortable pace."
 Tues,Sep 2,Bodyweight Circuit,"3 rounds: 20 squats, 15 push-ups, 30-sec plank, 20 lunges."
@@ -72,12 +72,12 @@ Fri,Sep 19,Rest,"Your body will need this before a big weekend."
 Sat,Sep 20,Brick Workout,"Bike: 20 miles (full race distance). Run: 2 miles immediately after. Sled Hockey: This is a big day. Fuel and hydrate well."
 Sun,Sep 21,Long Run,"6 miles. This is your key confidence-building run. Use the run/walk strategy from the very start."
 Mon,Sep 22,Swim + Recovery,"Swim: 800 yards, very easy. Yoga / NormaTec."
-Tues,Sep 23,Bike,"30 mins, very easy spin (RPE 4). Focus on high cadence."
+Tues,Sep 23,Bike + Sled Hockey,"30 mins, easy spin (RPE 4). Sled Hockey."
 Wed,Sep 24,Run,"20 mins, very easy jog. Include 4 x 30-second strides."
 Thur,Sep 25,Rest,"Total rest. Pack your gear."
 Fri,Sep 26,Travel + Light Swim,"Travel to race location. Swim: 10-15 minutes in the open water to get a feel for it."
 Sat,Sep 27,Packet Pickup + Bike/Run,"Packet pickup. Bike: 15 mins. Run: 10 mins. Very easy, just to keep the body loose."
-Sun,Sep 28,RACE DAY!,Go out there and have fun!`;
+Sun,Sep 28,RACE DAY!,"Go out there and have fun!"`;
 
         /**
          * Parses a string of CSV data into an array of objects.
@@ -114,7 +114,7 @@ Sun,Sep 28,RACE DAY!,Go out there and have fun!`;
             const container = document.getElementById('training-plan');
             if (!container) return;
 
-            // Get today's date in a format that matches the CSV (e.g., "Aug 25")
+            // Get today's date in a format that matches the CSV (e.g., "Aug 26")
             const today = new Date();
             const todayFormatted = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
             
