@@ -41,43 +41,43 @@
     </button>
 
     <script>
-        // Raw CSV data from your updated training plan
-        const csvData = `Day,Date,Workout,Details
-Mon,Aug 25,Recovery Day,"Sauna + Cold Plunge. Focus on hydration."
-Tues,Aug 26,Long Run Test (Completed),"6.37 miles. Strategy: 9-min run / 1-min walk. Result: Black toenail, pain 3-4/10. Confidence boost for race."
-Wed,Aug 27,Upper Body Focus & Swim,"AM: PT (only if 100% lower body & no toe pressure). PM: Upper Body Gym. Add a 20-30 minute easy, non-impact recovery swim."
-Thur,Aug 28,Bike + Sled Hockey,"Bike: 45 mins. Reduce to 20-30 easy mins if toe is painful. Sled Hockey should be fine."
-Fri,Aug 29,Swim Only,"45-minute swim session. Focus on technique and drills. NO RUNNING."
-Sat,Aug 30,Sled Hockey Exhibition Game,""
-Sun,Aug 31,Travel / Rest,""
-Mon,Sep 1,Open Water Swim,"30-40 minutes at a steady, comfortable pace."
-Tues,Sep 2,Bodyweight Circuit,"3 rounds: 20 squats, 15 push-ups, 30-sec plank, 20 lunges."
-Wed,Sep 3,Open Water Swim,"20 mins, with some faster efforts (4 x 2 mins at RPE 7-8)."
-Thur,Sep 4,Bodyweight Circuit,"3 rounds as above."
-Fri,Sep 5,Open Water Swim,"30 minutes, steady pace."
-Sat,Sep 6,Travel / Rest,""
-Sun,Sep 7,Welcome Back Run,"3 miles, very easy pace (RPE 5-6). Shake out the travel."
-Mon,Sep 8,Swim,"Swim: 1,500 yards, focus on technique."
-Tues,Sep 9,Bike,"Bike: 12 miles, with some hills if possible."
-Wed,Sep 10,Personal Training,"Lower body strength."
-Thur,Sep 11,Run + Upper Body,"Run: 3.5 miles, using a 9 min run / 1 min walk strategy. Upper Body: Strength routine."
-Fri,Sep 12,Rest or Light Swim,"Active recovery."
-Sat,Sep 13,Brick Workout,"Bike: 15 miles. Run: 1.5 miles immediately after, using run/walk."
-Sun,Sep 14,Long Run,"4.5 miles, using the 9 min run / 1 min walk strategy."
-Mon,Sep 15,Swim,"Swim: 1,800 yards, with 3 x 500 at a strong, steady pace."
-Tues,Sep 16,Bike,"Bike: 18 miles, including 3 x 10-minute intervals at a hard pace (RPE 8)."
-Wed,Sep 17,Personal Training,"Lower body strength."
-Thur,Sep 18,Run,"3 miles, easy pace."
-Fri,Sep 19,Rest,"Your body will need this before a big weekend."
-Sat,Sep 20,Brick Workout,"Bike: 20 miles (full race distance). Run: 2 miles immediately after. Sled Hockey: This is a big day. Fuel and hydrate well."
-Sun,Sep 21,Long Run,"6 miles. This is your key confidence-building run. Use the run/walk strategy from the very start."
-Mon,Sep 22,Swim + Recovery,"Swim: 800 yards, very easy. Yoga / NormaTec."
-Tues,Sep 23,Bike + Sled Hockey,"30 mins, easy spin (RPE 4). Sled Hockey."
-Wed,Sep 24,Run,"20 mins, very easy jog. Include 4 x 30-second strides."
-Thur,Sep 25,Rest,"Total rest. Pack your gear."
-Fri,Sep 26,Travel + Light Swim,"Travel to race location. Swim: 10-15 minutes in the open water to get a feel for it."
-Sat,Sep 27,Packet Pickup + Bike/Run,"Packet pickup. Bike: 15 mins. Run: 10 mins. Very easy, just to keep the body loose."
-Sun,Sep 28,RACE DAY!,"Go out there and have fun!"`;
+        // Raw CSV data from your updated training plan, now including Recovery Protocol
+        const csvData = `Day,Date,Workout,Details,Recovery Protocol
+Mon,Aug 25,Recovery Day,"Sauna + Cold Plunge. Focus on hydration.","(Completed)"
+Tues,Aug 26,Long Run Test (Completed),"6.37 miles. Strategy: 9-min run / 1-min walk. Result: Black toenail, pain 3-4/10.","Foot Care: Keep clean & dry. Wear shoes with a wide toe box. Elevate if possible."
+Wed,Aug 27,Upper Body Focus & Swim,"AM: PT (lower body). PM: Upper Body Gym. Add a 20-30 min easy recovery swim.","Post-Workout: NormaTec or Hyperice on legs. Sauna: 20 minutes."
+Thur,Aug 28,Bike + Sled Hockey,"Bike: 45 mins (monitor toe). Sled Hockey: 1 hour.","Focus on hydration and nutrition post-workout."
+Fri,Aug 29,Swim Only,"45-minute swim session. Focus on technique and drills. NO RUNNING.","Post-Swim: NormaTec or Hyperice on legs."
+Sat,Aug 30,Sled Hockey Exhibition Game,"","Post-Game: Light stretching."
+Sun,Aug 31,Travel / Rest,"","Focus on hydration during travel."
+Mon,Sep 1,Open Water Swim,"30-40 minutes at a steady, comfortable pace.","Evening: Restorative Yoga."
+Tues,Sep 2,Bodyweight Circuit,"3 rounds: 20 squats, 15 push-ups, 30-sec plank, 20 lunges.",""
+Wed,Sep 3,Open Water Swim,"20 mins, with some faster efforts (4 x 2 mins at RPE 7-8).",""
+Thur,Sep 4,Bodyweight Circuit,"3 rounds as above.",""
+Fri,Sep 5,Open Water Swim,"30 minutes, steady pace.",""
+Sat,Sep 6,Travel / Rest,"",""
+Sun,Sep 7,Welcome Back Run,"3 miles, very easy pace (RPE 5-6). Shake out the travel.",""
+Mon,Sep 8,Swim,"Swim: 1,500 yards, focus on technique.",""
+Tues,Sep 9,Bike,"Bike: 12 miles, with some hills if possible.",""
+Wed,Sep 10,Personal Training,"Lower body strength.","Post-Workout: NormaTec or Hyperice on legs. Sauna: 20 minutes."
+Thur,Sep 11,Run + Upper Body,"Run: 3.5 miles, using a 9 min run / 1 min walk strategy. Upper Body: Strength routine.",""
+Fri,Sep 12,Rest or Light Swim,"Active recovery.",""
+Sat,Sep 13,Brick Workout,"Bike: 15 miles. Run: 1.5 miles immediately after.",""
+Sun,Sep 14,Long Run,"4.5 miles, using the 9 min run / 1 min walk strategy.",""
+Mon,Sep 15,Swim,"Swim: 1,800 yards, with 3 x 500 at a strong, steady pace.","Post-Swim: NormaTec for legs & Sauna (20 mins). Evening: Restorative Yoga."
+Tues,Sep 16,Bike,"Bike: 18 miles, including 3 x 10-minute intervals at a hard pace (RPE 8).",""
+Wed,Sep 17,Personal Training,"Lower body strength.","Post-Workout: NormaTec or Hyperice on legs. Sauna: 20 minutes."
+Thur,Sep 18,Run,"3 miles, easy pace.",""
+Fri,Sep 19,Rest,"Your body will need this before a big weekend.","Focus on hydration and sleep."
+Sat,Sep 20,Brick Workout,"Bike: 20 miles. Run: 2 miles. Sled Hockey.",""
+Sun,Sep 21,Long Run,"6 miles. Key confidence-building run.","HIGH PRIORITY: Contrast Therapy (Sauna + Cold Plunge) within a few hours of finishing your run. (Worth the extra trip)."
+Mon,Sep 22,Swim + Recovery,"Swim: 800 yards, very easy.","Post-Swim: NormaTec for legs & Sauna (20 mins). Evening: Restorative Yoga."
+Tues,Sep 23,Bike + Sled Hockey,"30 mins, easy spin. Sled Hockey.",""
+Wed,Sep 24,Run,"20 mins, very easy jog. Include 4 x 30-second strides.",""
+Thur,Sep 25,Rest,"Total rest. Pack your gear.",""
+Fri,Sep 26,Travel + Light Swim,"Travel to race location. Swim: 10-15 minutes in the open water to get a feel for it.",""
+Sat,Sep 27,Packet Pickup + Bike/Run,"Packet pickup. Bike: 15 mins. Run: 10 mins. Very easy, just to keep the body loose.",""
+Sun,Sep 28,RACE DAY!,"Go out there and have fun!",""`;
 
         /**
          * Parses a string of CSV data into an array of objects.
@@ -123,7 +123,6 @@ Sun,Sep 28,RACE DAY!,"Go out there and have fun!"`;
             data.forEach(item => {
                 const isToday = item.Date === todayFormatted;
                 
-                // Determine card styling based on whether it's the current day
                 let cardClasses = 'bg-white p-6 rounded-lg shadow-md border-l-4 transition-all duration-300';
                 if (isToday) {
                     cardClasses += ' border-blue-500 scale-105 shadow-xl';
@@ -132,12 +131,22 @@ Sun,Sep 28,RACE DAY!,"Go out there and have fun!"`;
                     cardClasses += ' border-gray-200';
                 }
 
-                // Create the card element
                 const card = document.createElement('div');
                 card.className = cardClasses;
                 
                 if (isToday) {
-                    card.id = 'today'; // Add an ID to scroll to
+                    card.id = 'today';
+                }
+                
+                // Build the recovery protocol section only if data exists
+                let recoveryHTML = '';
+                if (item['Recovery Protocol']) {
+                    recoveryHTML = `
+                    <div class="mt-4 pt-4 border-t border-gray-200">
+                        <h3 class="text-md font-semibold text-green-700">Recovery Protocol</h3>
+                        <p class="mt-1 text-gray-600">${item['Recovery Protocol']}</p>
+                    </div>
+                    `;
                 }
 
                 card.innerHTML = `
@@ -146,15 +155,14 @@ Sun,Sep 28,RACE DAY!,"Go out there and have fun!"`;
                         <span class="text-sm font-medium ${isToday ? 'text-blue-600' : 'text-gray-500'}">${item.Day}, ${item.Date}</span>
                     </div>
                     <p class="mt-2 text-gray-600">${item.Details || 'No details provided.'}</p>
+                    ${recoveryHTML}
                 `;
                 container.appendChild(card);
             });
             
-            // If today's workout is found, scroll to it
             if(currentDayFound) {
                 const todayElement = document.getElementById('today');
                 if(todayElement) {
-                    // Scroll into view with a smooth behavior
                     todayElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
             }
@@ -164,7 +172,6 @@ Sun,Sep 28,RACE DAY!,"Go out there and have fun!"`;
         const toTopBtn = document.getElementById('toTopBtn');
 
         window.onscroll = function() {
-            // Show button if user scrolls down 20px from the top
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 toTopBtn.style.display = "block";
             } else {
@@ -172,12 +179,10 @@ Sun,Sep 28,RACE DAY!,"Go out there and have fun!"`;
             }
         };
 
-        // When the user clicks on the button, scroll to the top of the document
         toTopBtn.addEventListener('click', () => {
-             document.body.scrollTop = 0; // For Safari
-             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+             document.body.scrollTop = 0;
+             document.documentElement.scrollTop = 0;
         });
-
 
         // Main execution on page load
         document.addEventListener('DOMContentLoaded', () => {
